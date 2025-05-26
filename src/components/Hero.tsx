@@ -11,15 +11,15 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-16">
       <div className="max-w-4xl mx-auto text-center">
         <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold text-slate-800 mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-slate-800 dark:text-white mb-6 leading-tight">
             Hi, I'm{" "}
             <span className="bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
-              Your Name
+              Apeksha
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-2xl mx-auto">
-            A passionate <span className="font-semibold text-blue-600">Full Stack Developer</span> creating
-            beautiful and functional web experiences that make a difference.
+          <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
+            A passionate <span className="font-semibold text-blue-600 dark:text-blue-400">B.Tech IT Student</span> who loves
+            full-stack web development and solving DSA problems daily.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -31,21 +31,27 @@ const Hero = () => {
               Get to know me
             </Button>
             <div className="flex gap-4">
-              <Button variant="outline" size="icon" className="hover:bg-blue-50">
-                <Github className="h-5 w-5" />
+              <Button variant="outline" size="icon" className="hover:bg-blue-50 dark:hover:bg-slate-700" asChild>
+                <a href="https://github.com/apeksha" target="_blank" rel="noopener noreferrer">
+                  <Github className="h-5 w-5" />
+                </a>
               </Button>
-              <Button variant="outline" size="icon" className="hover:bg-blue-50">
-                <Linkedin className="h-5 w-5" />
+              <Button variant="outline" size="icon" className="hover:bg-blue-50 dark:hover:bg-slate-700" asChild>
+                <a href="https://linkedin.com/in/apeksha" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="h-5 w-5" />
+                </a>
               </Button>
-              <Button variant="outline" size="icon" className="hover:bg-blue-50">
-                <Mail className="h-5 w-5" />
+              <Button variant="outline" size="icon" className="hover:bg-blue-50 dark:hover:bg-slate-700" asChild>
+                <a href="mailto:apeksha@example.com">
+                  <Mail className="h-5 w-5" />
+                </a>
               </Button>
             </div>
           </div>
 
           <button
             onClick={scrollToAbout}
-            className="animate-bounce inline-flex items-center text-slate-500 hover:text-blue-600 transition-colors"
+            className="animate-bounce inline-flex items-center text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
             <ArrowDown className="h-6 w-6" />
           </button>
