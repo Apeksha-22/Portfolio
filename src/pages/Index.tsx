@@ -10,8 +10,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 
 const Index = () => {
   return (
-    <ThemeProvider defaultTheme="light" storageKey="apeksha-portfolio-theme">
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800 transition-colors duration-300">
+    <ThemeProvider defaultTheme="dark" storageKey="apeksha-portfolio-theme">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300">
         <Navbar />
         <Hero />
         <About />
