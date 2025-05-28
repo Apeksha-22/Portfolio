@@ -54,14 +54,14 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300">
+    <section id="projects" className="py-20 px-4 bg-gradient-to-br from-white via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-teal-400 bg-clip-text text-transparent mb-6 animate-fade-in">
+          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-blue-500 to-teal-500 bg-clip-text text-transparent mb-6 animate-fade-in">
             Featured Projects
           </h2>
-          <div className="w-32 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-teal-500 mx-auto mb-8 rounded-full shadow-lg shadow-blue-500/20"></div>
-          <p className="text-xl text-slate-300 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-32 h-1 bg-gradient-to-r from-blue-500 via-blue-500 to-teal-500 mx-auto mb-8 rounded-full shadow-lg shadow-blue-500/20"></div>
+          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
             A showcase of my recent work and personal projects with cutting-edge technologies
           </p>
         </div>
@@ -71,7 +71,7 @@ const Projects = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {projects.map((project, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="h-full overflow-hidden bg-gradient-to-br from-slate-800/90 to-slate-900/90 dark:from-slate-900/90 dark:to-slate-950/90 border-slate-700/50 dark:border-slate-600/30 backdrop-blur-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 group hover:scale-[1.02] hover:-translate-y-2">
+                  <Card className="h-full overflow-hidden bg-white/90 dark:bg-slate-900/90 border-slate-200/50 dark:border-slate-700/50 backdrop-blur-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 group hover:scale-[1.02] hover:-translate-y-2">
                     <div className="relative overflow-hidden">
                       <img
                         src={project.image}
@@ -82,19 +82,19 @@ const Projects = () => {
                       <div className="absolute top-4 right-4 w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/50"></div>
                     </div>
                     <CardHeader className="pb-3">
-                      <CardTitle className="text-xl text-slate-100 dark:text-white group-hover:text-blue-400 transition-colors duration-300">
+                      <CardTitle className="text-xl text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                         {project.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4 flex-1 flex flex-col">
-                      <p className="text-slate-300 dark:text-slate-400 text-sm leading-relaxed flex-1">
+                      <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed flex-1">
                         {project.description}
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {project.technologies.map((tech, techIndex) => (
                           <span
                             key={techIndex}
-                            className="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 dark:text-blue-400 rounded-full text-xs font-medium border border-blue-500/30 hover:border-blue-400/50 transition-colors duration-300 hover:shadow-lg hover:shadow-blue-500/20"
+                            className="px-3 py-1 bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-700 dark:text-blue-400 rounded-full text-xs font-medium border border-blue-500/30 hover:border-blue-400/50 transition-colors duration-300 hover:shadow-lg hover:shadow-blue-500/20"
                           >
                             {tech}
                           </span>
@@ -114,7 +114,7 @@ const Projects = () => {
                         <Button 
                           size="sm" 
                           variant="outline" 
-                          className="flex-1 border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white hover:border-slate-500 transition-all duration-300 group/btn" 
+                          className="flex-1 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white hover:border-slate-400 dark:hover:border-slate-500 transition-all duration-300 group/btn" 
                           asChild
                         >
                           <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">

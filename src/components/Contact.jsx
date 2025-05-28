@@ -2,9 +2,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Github, Send, Linkedin } from "lucide-react";
-import { useState } from "react";
+import { Mail, Github, Send, Linkedin } from "lucide-react";
+import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,14 +14,56 @@ const Contact = () => {
     message: ""
   });
   const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  useEffect(() => {
+    try {
+      emailjs.init("HD31RP0wdTdW9TBTI");
+      console.log("EmailJS initialized successfully");
+    } catch (error) {
+      console.error("Error initializing EmailJS:", error);
+    }
+  }, []);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    setIsLoading(true);
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+      to_name: 'Apeksha',
+      reply_to: formData.email
+    };
+
+    console.log("Sending email with params:", templateParams);
+
+    try {
+      const response = await emailjs.send(
+        "service_nlftouh",
+        "template_ids2v2q",
+        templateParams,
+        "HD31RP0wdTdW9TBTI"
+      );
+      
+      console.log("Email sent successfully:", response);
+      
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error('Error details:', error);
+      toast({
+        title: "Error sending message",
+        description: error.message || "Please try again later or contact me directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -34,19 +77,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "apeksha@example.com",
+      value: "morenaapekshajain2209@gmail.com",
       href: "mailto:morenaapekshajain2209@gmail.com"
     },
     {
       icon: Github,
       title: "GitHub",
-      value: "github.com/apeksha",
+      value: "github.com/Apeksha-22",
       href: "https://github.com/Apeksha-22"
     },
     {
       icon: Linkedin,
       title: "LinkedIn",
-      value: "linkedin.com/in/apeksha",
+      value: "linkedin.com/in/apeksha-jain",
       href: "https://www.linkedin.com/in/apeksha-jain-b95169295"
     }
   ];
@@ -137,9 +180,19 @@ const Contact = () => {
                 <Button
                   type="submit"
                   className="w-full bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 h-12"
+                  disabled={isLoading}
                 >
-                  <Send className="h-4 w-4 mr-2" />
-                  Send Message
+                  {isLoading ? (
+                    <div className="flex items-center justify-center">
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                      Sending...
+                    </div>
+                  ) : (
+                    <>
+                      <Send className="h-4 w-4 mr-2" />
+                      Send Message
+                    </>
+                  )}
                 </Button>
               </form>
             </CardContent>

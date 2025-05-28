@@ -7,7 +7,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-16">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-16 bg-white dark:bg-slate-900 transition-colors duration-300">
       <div className="max-w-4xl mx-auto text-center">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold text-slate-800 dark:text-white mb-6 leading-tight">
@@ -41,7 +41,7 @@ const Hero = () => {
                 </a>
               </Button>
               <Button variant="outline" size="icon" className="hover:bg-blue-50 dark:hover:bg-slate-700" asChild>
-                <a href="mailto:morenaapekshajain2209@example.com">
+                <a href="mailto:morenaapekshajain2209@gmail.com">
                   <Mail className="h-5 w-5" />
                 </a>
               </Button>
