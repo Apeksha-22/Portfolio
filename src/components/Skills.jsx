@@ -1,44 +1,9 @@
 import { Progress } from "@/components/ui/progress";
+import skillCategories from "@/data/skills"; // adjust path as per your structure
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Frontend",
-      icon: "🎨",
-      skills: [
-        { name: "React.js", level: 85 },
-        { name: "JavaScript", level: 90 },
-        { name: "HTML/CSS", level: 95 },
-        { name: "Tailwind CSS", level: 85 }
-      ]
-    },
-    {
-      title: "Backend & Database",
-      icon: "⚙️",
-      skills: [
-        { name: "Node.js", level: 80 },
-        { name: "Express.js", level: 70 },
-        { name: "MongoDB", level: 70 },
-        { name: "REST APIs", level: 65 }
-      ]
-    },
-    {
-      title: "Programming & Tools",
-      icon: "🚀",
-      skills: [
-        { name: "C++", level: 90 },
-        { name: "Git/GitHub", level: 85 },
-        { name: "DSA", level: 85 },
-        { name: "Problem Solving", level: 90 }
-      ]
-    }
-  ];
-
   return (
-    <section
-      id="skills"
-      className="py-20 px-4 bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 transition-colors duration-300 relative overflow-hidden"
-    >
+    <section id="skills" className="py-20 px-4 bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 transition-colors duration-300 relative overflow-hidden">
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-blue-500 to-teal-500 bg-clip-text text-transparent mb-6 animate-fade-in">
@@ -88,13 +53,6 @@ const Skills = () => {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/3 left-1/6 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/3 right-1/6 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-2/3 left-2/3 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
     </section>
   );

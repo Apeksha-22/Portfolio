@@ -3,7 +3,8 @@ import { Download, FileText } from "lucide-react";
 const Resume = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/resume.pdf";
+    link.href = "/resume.pdf"; // Ensure this path is correct
+    link.target = "_blank";
     link.download = "Apeksha_Resume.pdf";
     document.body.appendChild(link);
     link.click();

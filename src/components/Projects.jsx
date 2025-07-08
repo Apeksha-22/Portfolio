@@ -14,7 +14,7 @@ const Projects = () => {
     {
       title: "Imagify - AI Image Generation Tool",
       description: "An AI-powered image generation and processing tool with secure authentication, credit-based system, and real-time rendering. Built with MERN stack and Flask-based AI models.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop",
+      image: "https://play-lh.googleusercontent.com/-IABMvuFvoStNDyXnSsqJ-pLsTKA6J5UVNxgn57Zpv57_Jp1YOpg0wO07PahkXsT",
       technologies: ["React", "Node.js", "MongoDB", "Flask", "Firebase Auth"],
       liveUrl: "#", // Update this with the actual URL
       githubUrl: "#", // Update this with the actual URL
@@ -22,7 +22,7 @@ const Projects = () => {
     {
       title: "Professional Alumni Website",
       description: "Enhanced alumni-student interactions with secure authentication, profile management, and real-time updates. Features college-specific authentication and batch-year identification.",
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=600&h=400&fit=crop",
+      image: "https://sankara.ac.in/polytechnic/wp-content/uploads/2022/01/advisers.jpg",
       technologies: ["React", "Tailwind", "MongoDB", "Express", "Node.js"],
       liveUrl: "#", // Update this with the actual URL
       githubUrl: "#", // Update this with the actual URL
@@ -30,7 +30,7 @@ const Projects = () => {
     {
       title: "MyChatGPT",
       description: "AI chatbot application using OpenAI API and Next.js for intelligent conversations and user interactions.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
+      image: "https://static.vecteezy.com/system/resources/previews/025/802/285/original/ai-artificial-intelligence-chatgpt-openai-chatgpt-illustration-for-website-banner-poster-template-vector.jpg",
       technologies: ["Next.js", "OpenAI API", "React", "TypeScript"],
       liveUrl: "https://my-chatgpt-eta-ten.vercel.app/", // Already updated
       githubUrl: "https://github.com/Apeksha-22/MyChatgpt", // Already updated
@@ -38,7 +38,7 @@ const Projects = () => {
     {
       title: "E-Commerce Platform",
       description: "A complete e-commerce solution with user authentication, product catalog, cart management, and secure checkout functionality.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
+      image: "https://www.lawangtechno.com/wp-content/uploads/2023/03/Ecommerce-Website.jpg",
       technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
       liveUrl: "#", // Update this with the actual URL
       githubUrl: "#", // Update this with the actual URL
@@ -46,7 +46,7 @@ const Projects = () => {
     {
       title: "Interactive Game Collection",
       description: "Collection of interactive games including Tic-Tac-Toe and Stone-Paper-Scissors with AI opponents, score tracking, and smooth animations.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop",
+      image: "https://blog.empireoriginals.com/wp-content/uploads/2023/04/Ultimate-Collection-of-Interactive-Games-for-Online-Events.jpg",
       technologies: ["HTML", "CSS", "JavaScript", "Game Logic", "AI"],
       liveUrl: "https://tic-tac-toe-sandy-three-21.vercel.app/", // Already updated
       githubUrl: "https://github.com/Apeksha-22/TicTacToe", // Already updated
