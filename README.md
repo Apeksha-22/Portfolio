@@ -8,7 +8,7 @@ Take a look around, explore the different sections, and feel free to connect!
 
 ## 🌍 **Live Demo**
 
-🔗 [View Live Portfolio](https://portfolio-ir8q.vercel.app/)
+🔗 [View Live Portfolio](https://apekshaportfolio.vercel.app/)
 
 ---
 
