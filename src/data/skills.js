@@ -32,3 +32,4 @@ const skillCategories = [
 ];
 
 export default skillCategories;
+//skills
