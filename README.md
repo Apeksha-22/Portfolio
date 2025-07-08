@@ -8,7 +8,7 @@ Take a look around, explore the different sections, and feel free to connect!
 
 ## 🌍 **Live Demo**
 
-🔗 [View Live Portfolio](https://lovable.dev/projects/bc088c78-2bf4-4fa4-bd34-0f043fe6bfeb)
+🔗 [View Live Portfolio](https://portfolio-ir8q.vercel.app/)
 
 ---
 
